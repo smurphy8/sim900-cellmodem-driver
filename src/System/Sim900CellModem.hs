@@ -13,8 +13,7 @@ openCellModem = openSerial defaultCellModemPort defaultCellModemSettings
 
 waitForInput :: IO ()
 waitForInput = do
-   port <- openCellModem   
+   port <- openCellModem
    rslt <- recv port 9
    print rslt
    return ()
-sendOutput

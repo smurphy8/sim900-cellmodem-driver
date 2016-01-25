@@ -9,9 +9,12 @@ defaultCellModemPort = "/dev/ttyAMA0"
 
 defaultCellModemSettings = defaultSerialSettings {commSpeed=CS115200}
 
+openCellModem = openSerial defaultCellModemPort defaultCellModemSettings
+
 waitForInput :: IO ()
 waitForInput = do
-   port <- openSerial defaultCellModemPort defaultCellModemSettings
+   port <- openCellModem   
    rslt <- recv port 9
    print rslt
    return ()
+sendOutput

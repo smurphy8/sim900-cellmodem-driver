@@ -20,15 +20,6 @@ Library
   Build-Depends:        base >= 4 && < 5
                       , serialport >= 0.4.7 && < 0.4.8
                       , yaml
--- Test Suite Code
-                      , lens
-                      , regex-genex
-                      , tasty                      
-                      , tasty-golden
-                      , tasty-hunit
-                      , tasty-quickcheck
-                      , QuickCheck
-
 
 
 Test-Suite spec
